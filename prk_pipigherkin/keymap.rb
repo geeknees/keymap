@@ -1,12 +1,8 @@
-while !$mutex
-  relinquish
-end
-
 kbd = Keyboard.new
 
 kbd.init_pins(
-  [ 12, 11, 10, 9, 8 ],
-  [ 7, 6, 5, 4, 3, 2 ]
+  [ 8, 9, 10, 11, 12 ],
+  [ 2, 3, 4, 5, 6, 7 ]
 )
 
 # default layer should be added at first
@@ -30,18 +26,18 @@ kbd.add_layer :lower, %i(
   KC_TAB    KC_NO     KC_QUOTE    KC_DQUO   KC_MINUS   KC_GRAVE   KC_TILD   KC_PIPE   KC_COLON  KC_SCOLON
   KC_ESCAPE KC_LGUI   KC_LALT     KC_LCTL   SPC_LOWER  ADJUST     KC_RCTL   KC_RALT   KC_RGUI   KC_RSFT
 )
-kbd.define_mode_key :Z_LSFT,    [ :KC_Z,                               :KC_LSFT,                   150,             150 ]
-kbd.define_mode_key :X_LGUI,    [ :KC_X,                               :KC_LGUI,                   150,             150 ]
-kbd.define_mode_key :C_LALT,    [ :KC_C,                               :KC_LALT,                   150,             150 ]
-kbd.define_mode_key :V_LCTL,    [ :KC_V,                               :KC_LCTL,                   150,             150 ]
-kbd.define_mode_key :B_RCTL,    [ :KC_B,                               :KC_RCTL,                   150,             150 ]
-kbd.define_mode_key :N_RALT,    [ :KC_N,                               :KC_RALT,                   150,             150 ]
-kbd.define_mode_key :M_RGUI,    [ :KC_M,                               :KC_RGUI,                   150,             150 ]
-kbd.define_mode_key :ENTR_RSFT, [ :KC_ENTER,                            :KC_RSFT,                   150,             150 ]
-kbd.define_mode_key :SPC_RAISE, [ :KC_SPACE,                           :raise,                     150,             150 ]
-kbd.define_mode_key :BSP_LOWER, [ :KC_BSPACE,                          :lower,                     150,             150 ]
-kbd.define_mode_key :ADJUST,    [ Proc.new { kbd.lock_layer :adjust }, :KC_LSFT,                   300,             nil ]
-kbd.define_mode_key :UNLOCK,    [ Proc.new { kbd.unlock_layer },       :KC_LSFT,                   300,             nil ]
+kbd.define_mode_key :Z_LSFT,    [ :KC_Z,                               :KC_LSFT, 120, 150 ]
+kbd.define_mode_key :X_LGUI,    [ :KC_X,                               :KC_LGUI, 120, 150 ]
+kbd.define_mode_key :C_LALT,    [ :KC_C,                               :KC_LALT, 120, 150 ]
+kbd.define_mode_key :V_LCTL,    [ :KC_V,                               :KC_LCTL, 120, 150 ]
+kbd.define_mode_key :B_RCTL,    [ :KC_B,                               :KC_RCTL, 120, 150 ]
+kbd.define_mode_key :N_RALT,    [ :KC_N,                               :KC_RALT, 120, 150 ]
+kbd.define_mode_key :M_RGUI,    [ :KC_M,                               :KC_RGUI, 120, 150 ]
+kbd.define_mode_key :ENTR_RSFT, [ :KC_ENTER,                           :KC_RSFT, 120, 150 ]
+kbd.define_mode_key :SPC_RAISE, [ :KC_SPACE,                           :raise,   120, 150 ]
+kbd.define_mode_key :BSP_LOWER, [ :KC_BSPACE,                          :lower,   120, 150 ]
+kbd.define_mode_key :ADJUST,    [ Proc.new { kbd.lock_layer :adjust }, :KC_LSFT, 300, nil ]
+kbd.define_mode_key :UNLOCK,    [ Proc.new { kbd.unlock_layer },       :KC_LSFT, 300, nil ]
 
 class Fibonacci
   def initialize
