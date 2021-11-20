@@ -24,7 +24,7 @@ kbd.add_layer :adjust, %i(
 kbd.add_layer :lower, %i(
   KC_1      KC_2      KC_3        KC_4      KC_5       KC_6       KC_7      KC_8      KC_9      KC_0
   KC_TAB    KC_NO     KC_QUOTE    KC_DQUO   KC_MINUS   KC_GRAVE   KC_TILD   KC_PIPE   KC_COLON  KC_SCOLON
-  KC_ESCAPE KC_LGUI   KC_LALT     KC_LCTL   SPC_LOWER  ADJUST     KC_RCTL   KC_RALT   KC_RGUI   KC_RSFT
+  KC_ESCAPE KC_LGUI   KC_LALT     KC_LCTL   SPC_LOWER  ADJUST     KC_RCTL   KC_RALT   KC_RGUI   KC_QUES
 )
 kbd.define_mode_key :Z_LSFT,    [ :KC_Z,                               :KC_LSFT, 150, 150 ]
 kbd.define_mode_key :X_LGUI,    [ :KC_X,                               :KC_LGUI, 150, 150 ]
