@@ -26,16 +26,16 @@ kbd.add_layer :lower, %i(
   KC_TAB    KC_NO     KC_QUOTE    KC_DQUO   KC_UNDS    KC_GRAVE   KC_TILD   KC_PIPE   KC_COLON  KC_SCOLON
   KC_ESCAPE KC_LGUI   KC_LALT     KC_LCTL   SPC_LOWER  ADJUST     KC_RCTL   KC_RALT   KC_RGUI   KC_QUES
 )
-kbd.define_mode_key :Z_LSFT,    [ :KC_Z,                               :KC_LSFT, 120, 150 ]
-kbd.define_mode_key :X_LGUI,    [ :KC_X,                               :KC_LGUI, 120, 150 ]
-kbd.define_mode_key :C_LALT,    [ :KC_C,                               :KC_LALT, 120, 150 ]
-kbd.define_mode_key :V_LCTL,    [ :KC_V,                               :KC_LCTL, 120, 150 ]
-kbd.define_mode_key :B_RCTL,    [ :KC_B,                               :KC_RCTL, 120, 150 ]
-kbd.define_mode_key :N_RALT,    [ :KC_N,                               :KC_RALT, 120, 150 ]
-kbd.define_mode_key :M_RGUI,    [ :KC_M,                               :KC_RGUI, 120, 150 ]
-kbd.define_mode_key :ENTR_RSFT, [ :KC_ENTER,                           :KC_RSFT, 120, 150 ]
-kbd.define_mode_key :SPC_RAISE, [ :KC_SPACE,                           :raise,   120, 150 ]
-kbd.define_mode_key :BSP_LOWER, [ :KC_BSPACE,                          :lower,   120, 150 ]
+kbd.define_mode_key :Z_LSFT,    [ :KC_Z,                               :KC_LSFT, 300, 100 ]
+kbd.define_mode_key :X_LGUI,    [ :KC_X,                               :KC_LGUI, 300, 100 ]
+kbd.define_mode_key :C_LALT,    [ :KC_C,                               :KC_LALT, 300, 100 ]
+kbd.define_mode_key :V_LCTL,    [ :KC_V,                               :KC_LCTL, 300, 100 ]
+kbd.define_mode_key :B_RCTL,    [ :KC_B,                               :KC_RCTL, 300, 100 ]
+kbd.define_mode_key :N_RALT,    [ :KC_N,                               :KC_RALT, 300, 100 ]
+kbd.define_mode_key :M_RGUI,    [ :KC_M,                               :KC_RGUI, 300, 100 ]
+kbd.define_mode_key :ENTR_RSFT, [ :KC_ENTER,                           :KC_RSFT, 300, 100 ]
+kbd.define_mode_key :SPC_RAISE, [ :KC_SPACE,                           :raise,   300, 100 ]
+kbd.define_mode_key :BSP_LOWER, [ :KC_BSPACE,                          :lower,   300, 100 ]
 kbd.define_mode_key :ADJUST,    [ nil, Proc.new { kbd.lock_layer :adjust }, nil, nil ]
 kbd.define_mode_key :UNLOCK,    [ nil, Proc.new { kbd.unlock_layer }, nil, nil ]
 
